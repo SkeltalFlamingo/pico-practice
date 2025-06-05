@@ -1,0 +1,16 @@
+# Build artifacts
+build/
+
+# VS Code configuration files
+.vscode/
+
+# Temporary and editor files
+*.swp
+*.swo
+*~
+*.bak
+*.tmp
+
+# System files
+.DS_Store
+Thumbs.db
