@@ -29,4 +29,19 @@ void patternChase() {
 
     gpio_put(LED_PINS[index], 0);
     sleep_ms(200);
-  }}
+  }
+}
+
+const void (*patterns[])() = { &patternBlinkOnOff, &patternAlternate, &patternChase };
+unsigned short activePatternIndex = 0;
+
+void changePattern() {
+  if (activePatternIndex + 1 == PATTERN_COUNT) {
+    activePatternIndex = 0;
+    return;
+  }
+
+  activePatternIndex++;
+
+  return;
+}

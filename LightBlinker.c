@@ -2,6 +2,7 @@
 #include "pico/stdlib.h"
 #include "LEDs.h"
 #include "patterns.h"
+#include "button.h"
 #include <stdbool.h>
 
 int main()
@@ -9,10 +10,14 @@ int main()
     stdio_init_all();
     initLEDPins();
 
+    initButtonInterupt();
+
     while (true) {
 
-        patternChase();
+        patterns[activePatternIndex]();
 
         printf("Hello, world!\n");
+
+        handleButtonEvent();
     }
 }

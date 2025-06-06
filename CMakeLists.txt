@@ -35,7 +35,7 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(LightBlinker LightBlinker.c LEDs.c patterns.c)
+add_executable(LightBlinker LightBlinker.c LEDs.c patterns.c button.c)
 
 pico_set_program_name(LightBlinker "LightBlinker")
 pico_set_program_version(LightBlinker "0.1")
@@ -46,7 +46,7 @@ pico_enable_stdio_usb(LightBlinker 1)
 
 # Add the standard library to the build
 target_link_libraries(LightBlinker
-        pico_stdlib)
+        pico_stdlib hardware_gpio)
 
 # Add the standard include files to the build
 target_include_directories(LightBlinker PRIVATE
