@@ -3,7 +3,6 @@
 #include "pico/stdlib.h"
 #include "hardware/gpio.h"
 #include "patterns.h"
-#include <stdio.h>
 #include <LEDs.h>
 
 static bool isButtonPressed = false;
@@ -14,7 +13,6 @@ static void onButton(uint gpio, uint32_t events) {
 
 void handleButtonEvent() {
   if (isButtonPressed) {
-    printf("button pushed\n");
     changePattern();
 
     isButtonPressed = false;

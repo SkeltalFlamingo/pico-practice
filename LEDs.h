@@ -4,12 +4,14 @@
 #define LED_COUNT 4
 extern const uint LED_PINS[LED_COUNT];
 
-void initLEDPin(int ledIndex);
+void initLEDPin(unsigned short ledIndex);
 
 void initLEDPins();
 
-void LEDOn(int LEDIndex);
+void LEDOn(unsigned short LEDIndex);
 
-void LEDOff(int LEDIndex);
+void LEDOff(unsigned short LEDIndex);
+
+void LEDOffAll();
 
 #endif // LEDS_H

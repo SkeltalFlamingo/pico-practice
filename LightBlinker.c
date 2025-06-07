@@ -5,19 +5,16 @@
 #include "button.h"
 #include <stdbool.h>
 
+
 int main()
 {
-    stdio_init_all();
-    initLEDPins();
+  stdio_init_all();
+  initLEDPins();
+  initButtonInterupt();
 
-    initButtonInterupt();
-
-    while (true) {
-
-        patterns[activePatternIndex]();
-
-        printf("Hello, world!\n");
-
-        handleButtonEvent();
-    }
+  while (true) {
+    handleButtonEvent();
+    doPatternStep();
+    sleep_ms(500);
+  }
 }

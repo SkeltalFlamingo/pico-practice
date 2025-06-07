@@ -35,7 +35,7 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(LightBlinker LightBlinker.c LEDs.c patterns.c button.c)
+add_executable(LightBlinker LightBlinker.c LEDs.c patterns.c button.c utils.c)
 
 pico_set_program_name(LightBlinker "LightBlinker")
 pico_set_program_version(LightBlinker "0.1")
