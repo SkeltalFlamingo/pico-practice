@@ -2,7 +2,7 @@
 #define BUTTON_H
 #include <stdbool.h>
 
-#define BUTTON_PIN 0
+#define BUTTON_PIN 16
 
 void initButtonInterupt();
 

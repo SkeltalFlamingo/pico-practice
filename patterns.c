@@ -8,7 +8,7 @@
 
 void blinkOnOffStep0(){LEDOn(0);}
 void blinkOnOffStep1(){LEDOff(0);}
-const pattern_step blinkOnOffSteps[2] = {blinkOnOffStep0, blinkOnOffStep1};
+pattern_step blinkOnOffSteps[2] = {blinkOnOffStep0, blinkOnOffStep1};
 
 void alternateStep0(){
   LEDOff(1);
@@ -18,7 +18,7 @@ void alternateStep1(){
   LEDOff(0);
   LEDOn(1);
 }
-const pattern_step alternateSteps[2] = {alternateStep0, alternateStep1};
+pattern_step alternateSteps[2] = {alternateStep0, alternateStep1};
 
 void chaseStep(unsigned short onLedIndex){
   const unsigned short PREV_ON_LED_INDEX = (onLedIndex - 1 >= 0) ? onLedIndex - 1 : LED_COUNT - 1;
@@ -29,7 +29,7 @@ void chaseStep0() {chaseStep(0);}
 void chaseStep1() {chaseStep(1);}
 void chaseStep2() {chaseStep(2);}
 void chaseStep3() {chaseStep(3);}
-const pattern_step chaseSteps[4] = {chaseStep0, chaseStep1, chaseStep2, chaseStep3};
+pattern_step chaseSteps[4] = {chaseStep0, chaseStep1, chaseStep2, chaseStep3};
 
 const struct Pattern patterns[] = {
   {
